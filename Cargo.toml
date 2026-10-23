@@ -1,0 +1,16 @@
+[package]
+name = "daggonit"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Pure, toolkit-neutral DAG layout for character-cell (terminal) renderers"
+repository = "https://github.com/jowi-dev/daggonit"
+
+[lib]
+name = "daggonit"
+path = "src/lib.rs"
+
+# Keep this list empty or nearly so. The crate's whole point is that both
+# vdiff and tskmstr can depend on it without pulling in a terminal toolkit,
+# git, or parsers. No ratatui, crossterm, egui, git2, syn or tree-sitter.
+[dependencies]
